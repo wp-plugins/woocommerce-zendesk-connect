@@ -311,14 +311,14 @@ add_action('wp_footer','woo_wzn_fbt');
 * Basic WooCommerce checks
 * @since 0.0.5
 */
-function woocommerce_get_page_id( $page ) {
+function woo_wzn_get_page_id( $page ) {
 		$page = apply_filters('woocommerce_get_' . $page . '_page_id', get_option('woocommerce_' . $page . '_page_id'));
 		return ( $page ) ? $page : -1;
 }
-function is_shop() {
-		return ( is_post_type_archive( 'product' ) || is_page( woocommerce_get_page_id( 'shop' ) ) ) ? true : false;
+function woo_wzn_is_shop() {
+		return ( is_post_type_archive( 'product' ) || is_page( woo_wzn_get_page_id( 'shop' ) ) ) ? true : false;
 }
-function is_product() {
+function woo_wzn_is_product() {
 		return is_singular( array( 'product' ) );
 }
 /**

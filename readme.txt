@@ -49,7 +49,7 @@ Enable this setting to create new Zendesk end users and organizations directly o
 
 == Changelog ==
 ***WooCommerce Zendesk Connect***
-= 2013.04.29 - version 0.0.5 =
+= 2013.06.07 - version 0.0.5 =
 * First release
 
 == Frequently Asked Questions ==

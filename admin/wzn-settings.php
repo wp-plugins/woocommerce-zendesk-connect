@@ -359,7 +359,7 @@ function woocommerce_wzn_page() {
 				<div style="float:right; width:25%;">
 					<div class="postbox">
 						<h3><?php _e( 'Buy Pro!', 'woo-wzn' ); ?></h3>
-						<div class="inside dymo-preview">
+						<div class="inside zendesk-preview">
 							<p><?php echo __( 'Check out our ', 'woo-wzn' ); ?> <a href="http://wordpress.geev.nl/product/woocommerce-zendesk-connect/">website</a> <?php _e('to find out more about WooCommerce Zendesk Connect Pro.', 'woo-wzn' );?></p>
 							<p><?php _e('For only &euro; 25,00 you will get a lot of features and access to our support section.', 'woo-wzn' );?></p>
 							<p><?php _e('A couple of features:', 'woo-wzn' );?>
@@ -368,14 +368,14 @@ function woocommerce_wzn_page() {
 					</div>
 					<div class="postbox">
 						<h3><?php _e( 'Show Your Love', 'woo-wzn' ); ?></h3>
-						<div class="inside dymo-preview">
+						<div class="inside zendesk-preview">
 							<p><?php echo sprintf(__( 'This plugin is developed by %s, a Dutch graphic design and webdevelopment company.', 'woo-wzn' ),'Geev vormgeeving'); ?></p>
 							<p><?php _e( 'If you are happy with this plugin please show your love by liking us on Facebook', 'woo-wzn' ); ?></p>
 							<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fgeevvormgeeving&amp;width=240&amp;height=62&amp;show_faces=false&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:62px;" allowTransparency="true"></iframe>
 							<p><?php _e( 'Or', 'woo-wzn' ); ?></p>
 							<ul style="list-style:square;padding-left:20px;margin-top:-10px;">
-								<li><a href="http://wordpress.org/extend/plugins/woocommerce-zendesk-connect/" target=_blank title="Woocommerce DYMO print"><?php _e( 'Rate the plugin 5&#9733; on WordPress.org', 'woo-wzn' ); ?></a></li>
-								<li><a href="http://wordpress.geev.nl/product/woocommerce-zendesk-connect/" target=_blank title="Woocommerce DYMO print"><?php _e( 'Blog about it & link to the plugin page', 'woo-wzn' ); ?></a></li>
+								<li><a href="http://wordpress.org/extend/plugins/woocommerce-zendesk-connect/" target=_blank title="Woocommerce Zendesk Connect"><?php _e( 'Rate the plugin 5&#9733; on WordPress.org', 'woo-wzn' ); ?></a></li>
+								<li><a href="http://wordpress.geev.nl/product/woocommerce-zendesk-connect/" target=_blank title="Woocommerce Zendesk Connect"><?php _e( 'Blog about it & link to the plugin page', 'woo-wzn' ); ?></a></li>
 							</ul>
 						</div>
 					</div>

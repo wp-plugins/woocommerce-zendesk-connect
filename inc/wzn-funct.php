@@ -77,9 +77,6 @@ function woo_wzn_ticket($args=array()) {
 */
 function woo_wzn_user($arr) {
 	$user_id = get_current_user_id();
-	echo '<strong>Hier:</strong> ';
-	print_r($arr);
-	echo '<hr>';
 	$zendesk = woo_wzn_zendesk();
 	
 	// get Organization id;
@@ -91,8 +88,6 @@ function woo_wzn_user($arr) {
 	
 	// search if user already exists
 	$data    = $zendesk->call("/users/search.json?query=".$arr['mail'],'','GET');
-	echo '<b>User data</b><br>';
-	print_r($data);
 	// check if user id exists
 	$tags=str_replace(' ', '_', str_replace(', ', ',', get_option('woo_wzn_taguser')));
 	if(get_option('woo_wzn_verify_user')=='on') {
@@ -116,9 +111,6 @@ function woo_wzn_user($arr) {
 	  // update user with new data
 	  $update  = json_encode(array('user' => array('id'=>$data->users[0]->id,'name'=>$arr['name'],'email' => $arr['mail'],'role'=>'end-user','verified'=>$verified,'phone'=>$arr['phone'],'details'=>$details,'notes'=>$notes,'organization_id'=>$org_id,'tags'=>$tags)), JSON_FORCE_OBJECT);
 	  $data    = $zendesk->call("/users/".$data->users[0]->id,$update,'PUT');
-	  print_r('user exists');
-	  echo '<hr>';
-	  print_r($data);
 		if ( get_user_meta($user_id, 'wzn_user') !=$data->user->id ) {
 			update_user_meta($user_id, 'wzn_user', $data->user->id);
 		} else {
@@ -129,9 +121,6 @@ function woo_wzn_user($arr) {
 	  // create user
 	  $create  = json_encode(array('user' => array('name'=>$arr['name'],'email' => $arr['mail'],'role'=>'end-user','verified'=>$verified,'phone'=>$arr['phone'],'details'=>$arr['details'],'notes'=>$arr['notes'],'organization_id'=>$org_id,'tags'=>$tags)), JSON_FORCE_OBJECT);
 	  $data    = $zendesk->call("/users",$create,'POST');
-	  echo 'user created';
-	  echo '<hr>';
-	  print_r($data);
 	  		if ( get_user_meta($user_id, 'wzn_user') !=$data->id ) {
 			update_user_meta($user_id, 'wzn_user', $data->id);
 		} else {
@@ -156,17 +145,13 @@ function woo_wzn_org($org,$org_id='') {
 	} else {
 	  $url='/organizations/'.$org_id;
 	}
-	echo $url.'<br>';
 	$data    = $zendesk->call($url,'','GET');
 	
 	$tags=str_replace(' ', '_', str_replace(', ', ',', get_option('woo_wzn_tagorg')));
 	
-	print_r($data);
-	echo '<hr>';
 	// check if organization id exists
 	$user_id = get_current_user_id();
 	
-	echo '<b><font color=red>User id:'.$user_id.'</font></b>';
 	if(isset($data->organization->id) && $data->organization->id!="" && $org_id!="") {
 	  // update org with new data
 	  $update  = json_encode(array('organization' => array('name'=>$org,'tags'=>$tags)), JSON_FORCE_OBJECT);
@@ -183,7 +168,6 @@ function woo_wzn_org($org,$org_id='') {
 	  // create org
 	  $create  = json_encode(array('organization' => array('name'=>$org,'tags'=>$tags)), JSON_FORCE_OBJECT);
 	  $data    = $zendesk->call("/organizations",$create,'POST');
-	  print_r($data);
 		if ( get_user_meta($user_id, 'wzn_org') !=$data->organization->id ) {
 		  update_user_meta($user_id, 'wzn_org', $data->organization->id);
 		} else {
@@ -473,7 +457,7 @@ add_action('wp_ajax_nopriv_send_ticket', 'wzn_process_send_ticket');
 * @since 0.0.5
 */
 function wzn_ticket_form() {
-	if($_GET['act']=='s') { echo 'Succesvol verzonden'; }
+	if($_GET['act']=='s') { _e( 'Succesfully sent', 'woo-wzn'); }
 	echo '<div id=send_tickets class=col2-set>';
 	echo '<p class=woo-wzn-success></p>';
 	echo '<div class=col-1>';
@@ -493,7 +477,7 @@ function wzn_ticket_form() {
 	}
 	echo '<p class="form-row form-row-wide wzn-subject wzn-input-req"><label for=wzn_subject>'.__( 'Subject:', 'woo-wzn') .'</label> <input type=text class=input-text id=wzn_subject name="wzn_subject" required aria-required="true"></p>';
 	echo '<p class="form-row form-row-wide wzn-comment wzn-input-req"><label for=wzn_comment>'.__( 'Message:', 'woo-wzn') .'</label> <textarea id=wzn_comment name="wzn_comment" required aria-required="true" rows="4" cols="55" style="width:100%;"></textarea>';
-	echo '<p class="form-row form-row-wide wzn-submit"><input class=button type=submit name=wzn_submit value="Send"></p>';
+	echo '<p class="form-row form-row-wide wzn-submit"><input class=button type=submit name=wzn_submit value="'.__( 'Send', 'woo-wzn') .'"></p>';
 	echo '</div>';
 	echo '</form>';
 	echo '</div>';

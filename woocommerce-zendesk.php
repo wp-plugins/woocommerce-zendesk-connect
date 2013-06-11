@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Zendesk Connect
 Plugin URI: http://wordpress.geev.nl/product/woocommerce-zendesk-connect/
 Description: This plugin connects WooCommerce with Zendesk. - Free version
-Version: 0.0.5
+Version: 0.0.6
 Requires at least: 3.5
 Author: Geev vormgeeving
 Author URI: http://wordpress.geev.nl/

@@ -64,5 +64,5 @@ You may use the free version as it is. When you buy WooCommerce Zendesk Connect 
 For a full list of features, please check out [our website](http://wordpress.geev.nl/product/woocommerce-zendesk-connect/).
 
 = Why is there a PRO version? = 
-We want to give everyone the opportunity to use and try our plugins, but if you want to get more options and access to our support section you can buy our PRO version. WooCommerce Zendesk Pro costs only **&euro; 25,00**.
+We want to give everyone the opportunity to use and try our plugins, but if you want to get more options and access to our support section you can buy our PRO version. WooCommerce Zendesk Pro costs only **&euro; 29,00**.
 Use COUPON code **FIRSTRELEASE** to get 25% off as one of our first users.

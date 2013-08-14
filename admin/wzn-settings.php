@@ -67,10 +67,7 @@ function woocommerce_wzn_page() {
 			<div id="message" class="updated fade"><p><strong><?php _e( 'Your settings have been saved.', 'woo-wzn' ); ?></strong></p></div>
 		<?php } ?>
 		<div id="content">
-		  <form method="post" action="" id="wzn_settings">
-			<?php wp_nonce_field('wzn_nonce'); ?>
-			<input type=hidden name=woo_wzn_version value="0.0.5">
-			<input type="hidden" name="wzn_fields_submitted" value="submitted">
+		  
 			<div id="poststuff">
 				<div style="float:left; width:72%; padding-right:3%;">
 					<div id="tabs">
@@ -82,6 +79,10 @@ function woocommerce_wzn_page() {
 					  <a id=zendesk-tab class="nav-tab" href="#top#zendesk"><?php _e( 'Authentication', 'woo-wzn' ); ?></a>
 
 					</h2>
+				<form method="post" action="" id="wzn_settings">
+				  <?php wp_nonce_field('wzn_nonce'); ?>
+				  <input type=hidden name=woo_wzn_version value="0.0.5">
+				  <input type="hidden" name="wzn_fields_submitted" value="submitted">
 					<div id="zendesk" class="tab">
 						<h2><?php _e( 'Authentication with Zendesk', 'woo-wzn' ); ?></h2>
 						<div class="inside wzn-settings">
@@ -352,7 +353,7 @@ function woocommerce_wzn_page() {
 								</tr>
 							</table>
 						</div>
-					</div>
+					</div></form>
 					</div>
 				</div>
 				<?php // right column with Plugin information ?>
@@ -361,7 +362,7 @@ function woocommerce_wzn_page() {
 						<h3><?php _e( 'Buy Pro!', 'woo-wzn' ); ?></h3>
 						<div class="inside zendesk-preview">
 							<p><?php echo __( 'Check out our ', 'woo-wzn' ); ?> <a href="http://wordpress.geev.nl/product/woocommerce-zendesk-connect/">website</a> <?php _e('to find out more about WooCommerce Zendesk Connect Pro.', 'woo-wzn' );?></p>
-							<p><?php _e('For only &euro; 25,00 you will get a lot of features and access to our support section.', 'woo-wzn' );?></p>
+							<p><?php _e('For only &euro; 29,00 you will get a lot of features and access to our support section.', 'woo-wzn' );?></p>
 							<p><?php _e('A couple of features:', 'woo-wzn' );?>
 							<ul style="list-style:square;padding-left:20px;margin-top:-10px;"><li><?php _e('Add tags to users and organizations', 'woo-wzn' );?></li><li><?php _e('Add customer address to users or organizations', 'woo-wzn' );?></li><li><?php _e('Add ticket form to product detail page', 'woo-wzn' );?></li><li><?php _e('Add ticket form to order detail page', 'woo-wzn' );?></li></ul>
 						</div>
@@ -381,7 +382,6 @@ function woocommerce_wzn_page() {
 					</div>
 				</div>
 			</div>
-		  </form>
 	</div>
 </div>
 <?php }

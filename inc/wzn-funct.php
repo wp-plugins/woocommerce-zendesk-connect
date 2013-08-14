@@ -441,7 +441,7 @@ function woo_wzn_scripts() {
 function wzn_process_send_ticket() {
 	check_ajax_referer( "wzn_nonce",'_wpnonce' );
 	if(isset($_POST['action']) && $_POST['action']=='send_ticket') {
-		echo '<p class="woocommerce-message success woo-wzn-error">' . __( 'Thank you for contacting us. Your message is succesfully send.', 'woo-wzn') . '</p>';
+		echo '<p class="woocommerce-message success woo-wzn-error">' . __( 'Thank you for contacting us. Your message is successfully sent.', 'woo-wzn') . '</p>';
 		$args=array('name'=>wzn_clean($_POST['wzn_user_name']),'email'=>wzn_clean($_POST['wzn_user_mail']),'subject'=>wzn_clean($_POST['wzn_subject']),'body'=>wzn_clean($_POST['wzn_comment']),'user_id'=>get_current_user_id());
 		woo_wzn_ticket($args);
 	} else {

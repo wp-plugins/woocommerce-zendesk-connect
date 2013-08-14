@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
 * This file contains all general functions for WooCommerce Zendesk Connect
 **/
@@ -381,6 +382,7 @@ if(get_option( 'woo_wzn_orderdetail_pos' )=='before' && get_option('woo_wzn_orde
 * @since 0.0.5
 */
 function woo_wzn_myaccount() {
+	$style='';
 	if(get_option( 'woo_wzn_myaccount_pos' )=='after') { $style='style="margin:30px 0 0 0;"';}
 	echo '<h2 '.$style.'>'.get_option('woo_wzn_myaccount_title').'</h2>';
 	wzn_ticket_form();
@@ -440,9 +442,9 @@ function woo_wzn_scripts() {
 */
 function wzn_process_send_ticket() {
 	check_ajax_referer( "wzn_nonce",'_wpnonce' );
-	if(isset($_POST['action']) && $_POST['action']=='send_ticket') {
+	if(isset($_POST['action']) && $_POST['action']=='send_ticket' && is_email($_POST['wzn_user_mail'])) {
 		echo '<p class="woocommerce-message success woo-wzn-error">' . __( 'Thank you for contacting us. Your message is successfully sent.', 'woo-wzn') . '</p>';
-		$args=array('name'=>wzn_clean($_POST['wzn_user_name']),'email'=>wzn_clean($_POST['wzn_user_mail']),'subject'=>wzn_clean($_POST['wzn_subject']),'body'=>wzn_clean($_POST['wzn_comment']),'user_id'=>get_current_user_id());
+		$args=array('name'=>wzn_clean(sanitize_text_field($_POST['wzn_user_name'])),'email'=>wzn_clean($_POST['wzn_user_mail']),'subject'=>wzn_clean(sanitize_text_field($_POST['wzn_subject'])),'body'=>wzn_clean(esc_attr($_POST['wzn_comment'])),'user_id'=>get_current_user_id());
 		woo_wzn_ticket($args);
 	} else {
 		echo '<p class="woocommerce-error woo-wzn-error error">' . __( 'Something went wrong, please try again.', 'woo-wzn') . '</p>';
@@ -457,7 +459,7 @@ add_action('wp_ajax_nopriv_send_ticket', 'wzn_process_send_ticket');
 * @since 0.0.5
 */
 function wzn_ticket_form() {
-	if($_GET['act']=='s') { _e( 'Succesfully sent', 'woo-wzn'); }
+	if(isset($_GET['act']) && $_GET['act']=='s') { _e( 'Succesfully sent', 'woo-wzn'); }
 	echo '<div id=send_tickets class=col2-set>';
 	echo '<p class=woo-wzn-success></p>';
 	echo '<div class=col-1>';

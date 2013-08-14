@@ -21,13 +21,21 @@ function woocommerce_wzn_page() {
 	// Save all settings
 	if ( isset( $_POST['wzn_fields_submitted'] ) && $_POST['wzn_fields_submitted'] == 'submitted' ) {
 	check_admin_referer( 'wzn_nonce');
+	
+	if(!is_email($_POST['woo_wzn_email'])) {
+		$_POST['woo_wzn_email']='';
+	}
+	if(!is_email($_POST['woo_wzn_apiuser'])) {
+		$_POST['woo_wzn_apiuser']='';
+	}
+	
 	update_option('woo_wzn_use_style','off');
 	update_option('woo_wzn_create_org','off');
 	update_option('woo_wzn_create_user','off');
 	update_option('woo_wzn_verify_user','off');
 	update_option('woo_wzn_email_enable','off');
-	
 		foreach ( $_POST as $key => $value ) {
+			if($key!="woo_wzn_fbt") $value=sanitize_text_field($value);
 			if ( get_option( $key ) != $value ) {
 				update_option( $key, $value );
 			} else {
@@ -92,7 +100,7 @@ function woocommerce_wzn_page() {
     									<label for="woo_wzn_subdomain"><b><?php _e( 'Account subdomain:', 'woo-wzn' ); ?></b></label>
     								</th>
     								<td>
-    									<input type="text" name="woo_wzn_subdomain" placeholder="yourname" size=70 required value="<?php echo get_option('woo_wzn_subdomain');?>">
+    									<input type="text" name="woo_wzn_subdomain" placeholder="yourname" size=70 required value="<?php echo esc_attr(get_option('woo_wzn_subdomain'));?>">
     									<br>
 										<span class="description">
 											<?php _e( 'Enter your Zendesk account subdomain. For example: yourname.zendesk.com.', 'woo-wzn' );?>
@@ -104,7 +112,7 @@ function woocommerce_wzn_page() {
     									<label for="woo_wzn_apikey"><b><?php _e( 'Zendesk API token:', 'woo-wzn' ); ?></b></label>
     								</th>
     								<td>
-    									<input type="text" name="woo_wzn_apikey" size=70 required value="<?php echo get_option('woo_wzn_apikey');?>">
+    									<input type="text" name="woo_wzn_apikey" size=70 required value="<?php echo esc_attr(get_option('woo_wzn_apikey'));?>">
     									<br>
 										<span class="description">
 											<?php _e( 'Enter the API token.', 'woo-wzn' );?><br>
@@ -117,7 +125,7 @@ function woocommerce_wzn_page() {
     									<label for="woo_wzn_apiuser"><b><?php _e( 'Zendesk API administrator:', 'woo-wzn' ); ?></b></label>
     								</th>
     								<td>
-    									<input type="email" name="woo_wzn_apiuser" size=70 placeholder="yourname@me.com" required value="<?php echo get_option('woo_wzn_apiuser');?>">
+    									<input type="email" name="woo_wzn_apiuser" size=70 placeholder="yourname@me.com" required value="<?php echo esc_attr(get_option('woo_wzn_apiuser'));?>">
     									<br>
 										<span class="description">
 											<?php _e( 'Enter the email address of the user who generated the Zendesk API key.', 'woo-wzn' );?>
@@ -141,8 +149,8 @@ function woocommerce_wzn_page() {
     								</th>
     								<td>
     									<select name="woo_wzn_con_type" class="select">
-											<option value="thankyou" <?php selected( get_option( 'woo_wzn_con_type' ), 'thankyou' ); ?>><?php echo _e( 'After checkout', 'woo-wzn' );?></option>
-											<option value="checkout" <?php selected( get_option( 'woo_wzn_con_type' ), 'checkout' ); ?>><?php echo _e( 'On checkout', 'woo-wzn' );?></option>
+											<option value="thankyou" <?php selected( esc_attr(get_option( 'woo_wzn_con_type' )), 'thankyou' ); ?>><?php echo _e( 'After checkout', 'woo-wzn' );?></option>
+											<option value="checkout" <?php selected( esc_attr(get_option( 'woo_wzn_con_type' )), 'checkout' ); ?>><?php echo _e( 'On checkout', 'woo-wzn' );?></option>
 										</select><br>
 										<span class="description">
 											<?php _e( 'Choose when you want to connect to Zendesk and add users / organizations:', 'woo-wzn' );
@@ -156,7 +164,7 @@ function woocommerce_wzn_page() {
     									<label for="woo_wzn_create_user"><b><?php _e( 'Create users:', 'woo-wzn' ); ?></b></label>
     								</th>
     								<td>
-										<input id=woo_wzn_create_user type=checkbox <?php if(get_option( 'woo_wzn_create_user' )=='on' || get_option( 'woo_wzn_create_user' )=="") { echo 'checked';}?> name="woo_wzn_create_user"> <label for="woo_wzn_create_user"><?php _e( 'Enable auto creation of Zendesk end-users.', 'woo-wzn' ); ?></label><br>
+										<input id=woo_wzn_create_user type=checkbox <?php if(esc_attr(get_option( 'woo_wzn_create_user' ))=='on' || esc_attr(get_option( 'woo_wzn_create_user' ))=="") { echo 'checked';}?> name="woo_wzn_create_user"> <label for="woo_wzn_create_user"><?php _e( 'Enable auto creation of Zendesk end-users.', 'woo-wzn' ); ?></label><br>
 										<span class="description">
 											<?php _e( 'Create Zendesk end-users from new customers on WooCommerce checkout.', 'woo-wzn' );?>
 										</span>
@@ -167,7 +175,7 @@ function woocommerce_wzn_page() {
     									<label for="woo_wzn_verify_user"><b><?php _e( 'Verify users:', 'woo-wzn' ); ?></b></label>
     								</th>
     								<td>
-										<input id=woo_wzn_verify_user type=checkbox <?php if(get_option( 'woo_wzn_verify_user' )!='off') { echo 'checked';}?> name="woo_wzn_verify_user"> <label for="woo_wzn_verify_user"><?php _e( 'Enable verify upon creation.', 'woo-wzn' ); ?></label><br>
+										<input id=woo_wzn_verify_user type=checkbox <?php if(esc_attr(get_option( 'woo_wzn_verify_user' ))!='off') { echo 'checked';}?> name="woo_wzn_verify_user"> <label for="woo_wzn_verify_user"><?php _e( 'Enable verify upon creation.', 'woo-wzn' ); ?></label><br>
 										<span class="description">
 											<?php _e( 'By default, Zendesk sends a verification email to a user when the user\'s email address is added to a profile. Check to enable this option and verify user upon creation.', 'woo-wzn' );?>
 										</span>
@@ -178,7 +186,7 @@ function woocommerce_wzn_page() {
     									<b><?php _e( 'Zendesk organizations:', 'woo-wzn' ); ?></b>
     								</th>
     								<td>
-										<input id=woo_wzn_create_org type=checkbox <?php if(get_option( 'woo_wzn_create_org' )=='on' || get_option( 'woo_wzn_create_org' )=="") { echo 'checked';}?> name="woo_wzn_create_org"> <label for="woo_wzn_create_org"><?php _e( 'Enable auto creation of Zendesk Organizations.', 'woo-wzn' ); ?></label><br>
+										<input id=woo_wzn_create_org type=checkbox <?php if(esc_attr(get_option( 'woo_wzn_create_org' ))=='on' || esc_attr(get_option( 'woo_wzn_create_org' ))=="") { echo 'checked';}?> name="woo_wzn_create_org"> <label for="woo_wzn_create_org"><?php _e( 'Enable auto creation of Zendesk Organizations.', 'woo-wzn' ); ?></label><br>
 										<span class="description">
 											<?php _e( 'Create Zendesk organization if a company name is provided by customer.', 'woo-wzn' );?>
 										</span>
@@ -206,7 +214,7 @@ function woocommerce_wzn_page() {
     									<b><?php _e( 'Email support section', 'woo-wzn' );?></b>
     								</th>
     								<td>
-										<input id=woo_wzn_email_enable type=checkbox <?php if(get_option( 'woo_wzn_email_enable' )!='off') { echo 'checked';}?> name="woo_wzn_email_enable"> <label for="woo_wzn_email_enable"><?php _e( 'Add a support section to customer emails.', 'woo-wzn' ); ?></label><br>
+										<input id=woo_wzn_email_enable type=checkbox <?php if(esc_attr(get_option( 'woo_wzn_email_enable' ))!='off') { echo 'checked';}?> name="woo_wzn_email_enable"> <label for="woo_wzn_email_enable"><?php _e( 'Add a support section to customer emails.', 'woo-wzn' ); ?></label><br>
     									<span class="description">
 											<?php _e('A new section will be added to all customer emails with support information.','woo_wzn');?>
 										</span>
@@ -265,7 +273,7 @@ function woocommerce_wzn_page() {
     									<label for="woo_wzn_email"><b><?php _e( 'Support email:', 'woo-wzn' ); ?></b></label>
     								</th>
     								<td>
-									  <input type="email" name="woo_wzn_email" size=70 placeholder="yourname@me.com" value="<?php echo get_option('woo_wzn_email');?>">
+									  <input type="email" name="woo_wzn_email" size=70 placeholder="yourname@me.com" value="<?php echo esc_attr(get_option('woo_wzn_email'));?>">
 									  <br>
 									  <span class="description">
 											<?php _e( 'This email address will be used to contact you in all below forms.', 'woo-wzn');?>
@@ -324,7 +332,7 @@ function woocommerce_wzn_page() {
     									<label for="woo_wzn_fbt"><b><?php _e( 'Code snippet:', 'woo-wzn' ); ?></b></label>
     								</th>
     								<td>
-									  <textarea style="width:90%;height:150px;" id=woo_wzn_fbt name=woo_wzn_fbt><?php echo stripslashes(get_option('woo_wzn_fbt'));?></textarea>
+									  <textarea style="width:90%;height:150px;" id=woo_wzn_fbt name=woo_wzn_fbt><?php echo esc_textarea(stripslashes(get_option('woo_wzn_fbt')));?></textarea>
 									  <br>
 									  <span class="description">
 											<?php echo sprintf(__( 'Copy / paste your Zendesk Feedback Tab code snippet. You can generate the code snippet from %s.', 'woo-wzn' ),'<a href="https://'.get_option('woo_wzn_subdomain').'.zendesk.com/agent/#/admin/dropboxes" target=_blank>'.__( 'this page', 'woo-wzn' ).'</a>');?>

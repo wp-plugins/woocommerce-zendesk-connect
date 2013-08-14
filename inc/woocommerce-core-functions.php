@@ -1,4 +1,5 @@
 <?php
+
 /**
  * WooCommerce Core Functions
  *

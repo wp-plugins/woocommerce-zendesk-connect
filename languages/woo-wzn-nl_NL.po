@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Zendesk Connect\n"
-"POT-Creation-Date: 2014-01-12 17:46+0100\n"
-"PO-Revision-Date: 2014-01-12 17:46+0100\n"
+"POT-Creation-Date: 2014-01-12 17:56+0100\n"
+"PO-Revision-Date: 2014-01-12 17:57+0100\n"
 "Last-Translator: Bart Pluijms <info@geev.nl>\n"
 "Language-Team: Geev vormgeeving <wordpress@geev.nl>\n"
 "Language: nl_NL\n"
@@ -128,11 +128,12 @@ msgstr ""
 
 #: admin/wzn-settings.php:158
 msgid ""
-"Connection is made after checkout, which is a bit faster, but could give "
-"some errors with payment methods."
+"Connection is made after checkout, which is a faster, but when a customer "
+"does not return to your page after payment no user is created."
 msgstr ""
-"Connectie wordt gemaakt na checkout. Dit is iets sneller, maar kan fouten "
-"geven met sommige betaalmethoden."
+"Connectie wordt gemaakt na checkout. Dit is iets sneller, maar wanneer een "
+"klant na betaling niet teruggaat naar je website wordt er geen user "
+"aangemaakt."
 
 #: admin/wzn-settings.php:164
 msgid "Create users:"

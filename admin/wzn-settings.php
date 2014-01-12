@@ -155,7 +155,7 @@ function woocommerce_wzn_page() {
 										<span class="description">
 											<?php _e( 'Choose when you want to connect to Zendesk and add users / organizations:', 'woo-wzn' );
 											echo '<br><strong>'.__( 'On checkout', 'woo-wzn' ).':</strong> '.__( 'Connection is made during checkout, which makes the checkout process a bit slower.', 'woo-wzn' ).'
-											<br><strong>'.__( 'After checkout', 'woo-wzn' ).':</strong> '.__( 'Connection is made after checkout, which is a bit faster, but could give some errors with payment methods.', 'woo-wzn' );?>
+											<br><strong>'.__( 'After checkout', 'woo-wzn' ).':</strong> '.__( 'Connection is made after checkout, which is a faster, but when a customer does not return to your page after payment no user is created.', 'woo-wzn' );?>
 										</span>
     								</td>
     							</tr>

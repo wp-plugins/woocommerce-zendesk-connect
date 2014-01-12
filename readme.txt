@@ -1,9 +1,9 @@
 === WooCommerce Zendesk Connect ===
-Contributors: Bart Pluijms
+Contributors: bpluijms
 Tags: woocommerce, zendesk
 Requires at least: 3.5
-Tested up to: 3.6
-Stable tag: 0.0.8
+Tested up to: 3.8
+Stable tag: 0.0.9
 License: GPLv2
 
 This plugin connects your WooCommerce store with your Zendesk account.
@@ -49,6 +49,10 @@ Enable this setting to create new Zendesk end users and organizations directly o
 
 == Changelog ==
 ***WooCommerce Zendesk Connect***
+= 2014.01.12 - version 0.0.9 =
+* Small bugfixes
+* Checked for WooCommerce 2.1 (Tested on Beta 3)
+
 = 2013.08.13 - version 0.0.8 =
 * Fix: Better sanitizing and error handling
 

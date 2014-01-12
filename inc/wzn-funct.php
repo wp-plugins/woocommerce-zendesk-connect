@@ -31,7 +31,7 @@ function wznMessage($message, $errormsg = false)
 	else {echo '<div id="message" class="updated fade">';}
 	echo "<p><strong>$message</strong></p></div>";
 }    
-function wznAdminMessages() {wznMessage(__( 'WooCommerce is not active. Please activate plugin before using WooCommerce Zendesk Connect plugin.', 'woo-wzn'), true);}
+function wznAdminMessages() {wznMessage(__( 'WooCommerce is not active. Please activate WooCommerce before using WooCommerce Zendesk Connect plugin.', 'woo-wzn'), true);}
 
 /** 
 * WordPress Administration Menu

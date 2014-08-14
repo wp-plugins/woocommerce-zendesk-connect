@@ -103,7 +103,7 @@ function woocommerce_wzn_page() {
     									<input type="text" name="woo_wzn_subdomain" placeholder="yourname" size=70 required value="<?php echo esc_attr(get_option('woo_wzn_subdomain'));?>">
     									<br>
 										<span class="description">
-											<?php _e( 'Enter your Zendesk account subdomain. For example: yourname.zendesk.com.', 'woo-wzn' );?>
+											<?php _e( 'Enter your Zendesk account subdomain. For example: enter <code>yourname</code> if your zendesk is located at yourname.zendesk.com.', 'woo-wzn' );?>
 										</span>
     								</td>
     							</tr>

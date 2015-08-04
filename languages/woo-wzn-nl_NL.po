@@ -1,0 +1,560 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Zendesk Connect\n"
+"POT-Creation-Date: 2014-01-12 17:56+0100\n"
+"PO-Revision-Date: 2014-01-12 17:57+0100\n"
+"Last-Translator: Bart Pluijms <info@geev.nl>\n"
+"Language-Team: Geev vormgeeving <wordpress@geev.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.1\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: woocommerce-zendesk.php:58
+#, php-format
+msgid ""
+"Please update your WooCommerce Zendesk Connect settings before using this "
+"new release. %s"
+msgstr ""
+"Update a.u.b. de WooCommerce Zendesk Connect instellingen voordat je verder "
+"gaat met deze release. %s"
+
+#: woocommerce-zendesk.php:58 woocommerce-zendesk.php:67
+msgid "Settings"
+msgstr "Instellingen"
+
+#: admin/wzn-settings.php:18
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Onvoldoende rechten om deze pagina te bekijken."
+
+#: admin/wzn-settings.php:73
+msgid "WooCommerce Zendesk Connect"
+msgstr "WooCommerce Zendesk Connect"
+
+#: admin/wzn-settings.php:75
+msgid "Your settings have been saved."
+msgstr "Instellingen zijn bewaard."
+
+#: admin/wzn-settings.php:84 admin/wzn-settings.php:143
+msgid "Users & Organizations"
+msgstr "Gebruikers & Organisaties"
+
+#: admin/wzn-settings.php:85
+msgid "Contact methods"
+msgstr "Contact methoden"
+
+#: admin/wzn-settings.php:86
+msgid "Integrations"
+msgstr "Integraties"
+
+#: admin/wzn-settings.php:87
+msgid "Authentication"
+msgstr "Authenticatie"
+
+#: admin/wzn-settings.php:95
+msgid "Authentication with Zendesk"
+msgstr "Authenticatie met Zendesk"
+
+#: admin/wzn-settings.php:100
+msgid "Account subdomain:"
+msgstr "Account subdomein:"
+
+#: admin/wzn-settings.php:106
+msgid ""
+"Enter your Zendesk account subdomain. For example: yourname.zendesk.com."
+msgstr ""
+"Vul je Zendesk account subdomein in. Bijvoorbeeld: yourname.zendesk.com."
+
+#: admin/wzn-settings.php:112
+msgid "Zendesk API token:"
+msgstr "Zendesk API token:"
+
+#: admin/wzn-settings.php:118
+msgid "Enter the API token."
+msgstr "Vul Zendesk API code in."
+
+#: admin/wzn-settings.php:119
+msgid ""
+"To generate a new API key, log-in to your Zendesk account, go to Channels --"
+"> API --> Token Access. Click on enable and copy paste the API token."
+msgstr ""
+"Om een nieuwe API key aan te maken log je in op je Zendesk account, ga naar "
+"Kanalen --> API --> Toegang met een token. Klik op \"ingeschakeld\" en knip "
+"en plak de API token."
+
+#: admin/wzn-settings.php:125
+msgid "Zendesk API administrator:"
+msgstr "Zendesk API administrator:"
+
+#: admin/wzn-settings.php:131
+msgid "Enter the email address of the user who generated the Zendesk API key."
+msgstr ""
+"Vul het e-mail adres in van de gebruiker die de API code heeft aangemaakt."
+
+#: admin/wzn-settings.php:137 admin/wzn-settings.php:197
+#: admin/wzn-settings.php:319 admin/wzn-settings.php:359
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: admin/wzn-settings.php:148
+msgid "Connection type:"
+msgstr "Connectie type:"
+
+#: admin/wzn-settings.php:152 admin/wzn-settings.php:158
+msgid "After checkout"
+msgstr "Na checkout"
+
+#: admin/wzn-settings.php:153 admin/wzn-settings.php:157
+msgid "On checkout"
+msgstr "Tijdens checkout"
+
+#: admin/wzn-settings.php:156
+msgid ""
+"Choose when you want to connect to Zendesk and add users / organizations:"
+msgstr ""
+"Kies wanneer je nieuwe gebruikers / organisaties wilt toevoegen aan Zendesk"
+
+#: admin/wzn-settings.php:157
+msgid ""
+"Connection is made during checkout, which makes the checkout process a bit "
+"slower."
+msgstr ""
+"Connectie wordt gemaakt tijdens checkout, dit maakt het checkout proces iets "
+"langzamer."
+
+#: admin/wzn-settings.php:158
+msgid ""
+"Connection is made after checkout, which is a faster, but when a customer "
+"does not return to your page after payment no user is created."
+msgstr ""
+"Connectie wordt gemaakt na checkout. Dit is iets sneller, maar wanneer een "
+"klant na betaling niet teruggaat naar je website wordt er geen user "
+"aangemaakt."
+
+#: admin/wzn-settings.php:164
+msgid "Create users:"
+msgstr "Creeer gebruikers:"
+
+#: admin/wzn-settings.php:167
+msgid "Enable auto creation of Zendesk end-users."
+msgstr "Maak automatisch Zendesk eind-gebruikers aan."
+
+#: admin/wzn-settings.php:169
+msgid "Create Zendesk end-users from new customers on WooCommerce checkout."
+msgstr ""
+"Creeer Zendesk eind-gebruikers van nieuwe klanten tijdens / na WooCommerce "
+"checkout."
+
+#: admin/wzn-settings.php:175
+msgid "Verify users:"
+msgstr "Verifieer gebruikers:"
+
+#: admin/wzn-settings.php:178
+msgid "Enable verify upon creation."
+msgstr "Activeer verifieren tijdens creatie."
+
+#: admin/wzn-settings.php:180
+msgid ""
+"By default, Zendesk sends a verification email to a user when the user's "
+"email address is added to a profile. Check to enable this option and verify "
+"user upon creation."
+msgstr ""
+"Standaard stuurt Zendesk een verificatie mail naar de gebruiker wanneer een "
+"e-mail adres is toegevoegd aan een profiel. Klik dit aan om een gebruiker "
+"automatisch te verifieren. "
+
+#: admin/wzn-settings.php:186
+msgid "Zendesk organizations:"
+msgstr "Zendesk organisaties:"
+
+#: admin/wzn-settings.php:189
+msgid "Enable auto creation of Zendesk Organizations."
+msgstr "Activeer automatisch aanmaken van Zendesk organisaties."
+
+#: admin/wzn-settings.php:191
+msgid "Create Zendesk organization if a company name is provided by customer."
+msgstr ""
+"Maak automatisch een nieuwe organisatie aan als een bedrijfsnaam is ingevuld "
+"door de klant."
+
+#: admin/wzn-settings.php:203
+msgid "Zendesk contact methods"
+msgstr "Zendesk contact methoden"
+
+#: admin/wzn-settings.php:205
+msgid "Specify in which ways your customers can contact you."
+msgstr "Geef aan op welke manier klanten in contact met je kunnen komen."
+
+#: admin/wzn-settings.php:209
+msgid "Add support details to customer emails"
+msgstr "Voeg een link met support details toe aan klant e-mails"
+
+#: admin/wzn-settings.php:214
+msgid "Email support section"
+msgstr "E-mail support sectie"
+
+#: admin/wzn-settings.php:217
+msgid "Add a support section to customer emails."
+msgstr "Voegt een support sectie toe aan klant e-mails."
+
+#: admin/wzn-settings.php:219
+msgid ""
+"A new section will be added to all customer emails with support information."
+msgstr ""
+"Een nieuwe sectie wordt toegevoegd aan alle klant e-mails met support "
+"informatie."
+
+#: admin/wzn-settings.php:225
+msgid "Support heading:"
+msgstr "Support titel:"
+
+#: admin/wzn-settings.php:229
+msgid "No heading"
+msgstr "Geen titel"
+
+#: admin/wzn-settings.php:230 admin/wzn-settings.php:291
+msgid "Need Support?"
+msgstr "Support nodig?"
+
+#: admin/wzn-settings.php:231 admin/wzn-settings.php:292
+msgid "Any Questions?"
+msgstr "Vragen?"
+
+#: admin/wzn-settings.php:232 admin/wzn-settings.php:293
+msgid "Need Help?"
+msgstr "Help nodig?"
+
+#: admin/wzn-settings.php:233 admin/wzn-settings.php:294
+msgid "Service"
+msgstr "Service"
+
+#: admin/wzn-settings.php:234 admin/wzn-settings.php:295
+msgid "Ask us"
+msgstr "Vraag ons"
+
+#: admin/wzn-settings.php:235 admin/wzn-settings.php:296
+msgid "More information"
+msgstr "Meer informatie"
+
+#: admin/wzn-settings.php:238
+msgid "Specify heading of the new support section."
+msgstr "Kies de titel voor de nieuwe support sectie."
+
+#: admin/wzn-settings.php:244
+msgid "Support text:"
+msgstr "Support tekst:"
+
+#: admin/wzn-settings.php:247
+msgid ""
+"Our Knowledgebase is the first place to look for help with our products. If "
+"you have any questions, please submit a ticket to our Help Desk."
+msgstr "Heb je vragen over deze bestelling? Stel ze ons via onze helpdesk. "
+
+#: admin/wzn-settings.php:249
+msgid "We will link this text to your Zendesk support desk."
+msgstr "Deze tekst wordt gebruikt om te linken naar je Zendesk support desk"
+
+#: admin/wzn-settings.php:255 admin/wzn-settings.php:305
+#: admin/wzn-settings.php:344
+msgid "Position:"
+msgstr "Positie:"
+
+#: admin/wzn-settings.php:259 admin/wzn-settings.php:309
+msgid "Before order item table"
+msgstr "Voor order item tabel"
+
+#: admin/wzn-settings.php:260 admin/wzn-settings.php:310
+msgid "After order item table"
+msgstr "Na order item tabel"
+
+#: admin/wzn-settings.php:263
+msgid "Where do you want to show the new support section?"
+msgstr "Waar wil je de nieuwe support sectie toevoegen?"
+
+#: admin/wzn-settings.php:268
+msgid "Add support ticket forms to WooCommerce"
+msgstr "Voeg support ticket formulier toe aan WooCommerce"
+
+#: admin/wzn-settings.php:273
+msgid "Support email:"
+msgstr "Support e-mail:"
+
+#: admin/wzn-settings.php:279
+msgid "This email address will be used to contact you in all below forms."
+msgstr "Dit e-mail adres wordt gebruikt om je tickets te koppelen in Zendesk"
+
+#: admin/wzn-settings.php:286
+msgid "Order overview page:"
+msgstr "Order overzichtspagina:"
+
+#: admin/wzn-settings.php:290
+msgid "Don't add form"
+msgstr "Geen formulier"
+
+#: admin/wzn-settings.php:299
+msgid "Enable Zendesk ticket form on order overview / My Account page."
+msgstr ""
+"Toon Zendesk ticket formulier op de order overzichts / Mijn account pagina."
+
+#: admin/wzn-settings.php:313
+msgid ""
+"Where do you want to show the new support section on the order detail page?"
+msgstr "Waar wil je het formulier tonen op de order detail pagina?"
+
+#: admin/wzn-settings.php:325
+msgid "Zendesk Feedback Tab"
+msgstr "Zendesk Feedback Tab"
+
+#: admin/wzn-settings.php:327
+msgid ""
+"The Feedback Tab lets you add support options to your web page. You can "
+"configure your Feedback Tab so that users can submit tickets, search the "
+"forums, or chat with agents."
+msgstr ""
+"Het \"Tabblad Feedback\" geeft je de mogelijkheid om support opties toe te "
+"voegen aan je website. Je kan het Tabblad Feedback configureren vanuit "
+"Zendesk."
+
+#: admin/wzn-settings.php:332
+msgid "Code snippet:"
+msgstr "Code snippet:"
+
+#: admin/wzn-settings.php:338
+#, php-format
+msgid ""
+"Copy / paste your Zendesk Feedback Tab code snippet. You can generate the "
+"code snippet from %s."
+msgstr ""
+"Knip en plak het Zendesk Tabblad Feedback code snippet. Je kan de code "
+"genereren vanaf %s."
+
+#: admin/wzn-settings.php:338
+msgid "this page"
+msgstr "deze pagina"
+
+#: admin/wzn-settings.php:348
+msgid "Don't add"
+msgstr "Niet toevoegen"
+
+#: admin/wzn-settings.php:349
+msgid "All pages"
+msgstr "Alle pagina's"
+
+#: admin/wzn-settings.php:350
+msgid "Only shop pages"
+msgstr "Alleen winkel pagina's"
+
+#: admin/wzn-settings.php:353
+msgid "Choose where you want to show the Feedback Tab."
+msgstr "Kies waar je het Tabblad Feedback wilt tonen."
+
+#: admin/wzn-settings.php:370
+msgid "Buy Pro!"
+msgstr "Koop Pro!"
+
+#: admin/wzn-settings.php:372
+msgid "Check out our "
+msgstr "Bekijk onze"
+
+#: admin/wzn-settings.php:372
+msgid "to find out more about WooCommerce Zendesk Connect Pro."
+msgstr "voor meer informatie over WooCommerce Zendesk Connect Pro."
+
+#: admin/wzn-settings.php:373
+msgid ""
+"For only &euro; 29,00 you will get a lot of features and access to our "
+"support section."
+msgstr ""
+"Voor &euro; 29,00 ontvang je veel meer functionaliteiten en toegang tot onze "
+"support sectie."
+
+#: admin/wzn-settings.php:374
+msgid "A couple of features:"
+msgstr "Een aantal functionaliteiten:"
+
+#: admin/wzn-settings.php:375
+msgid "Add tags to users and organizations"
+msgstr "Voeg tags toe aan gebruikers en organisaties"
+
+#: admin/wzn-settings.php:375
+msgid "Add customer address to users or organizations"
+msgstr "Voeg klant adres toe aan gebruikers en organisaties"
+
+#: admin/wzn-settings.php:375
+msgid "Add ticket form to product detail page"
+msgstr "Voeg een ticket formulier toe aan een product detail pagina"
+
+#: admin/wzn-settings.php:375
+msgid "Add ticket form to order detail page"
+msgstr "Toon ticket formulieren op de order detail pagina"
+
+#: admin/wzn-settings.php:379
+msgid "Show Your Love"
+msgstr "Show your Love"
+
+#: admin/wzn-settings.php:381
+#, php-format
+msgid ""
+"This plugin is developed by %s, a Dutch graphic design and webdevelopment "
+"company."
+msgstr ""
+"Deze plugin is ontwikkeld door %s, een Nederlands grafisch ontwerp bureau."
+
+#: admin/wzn-settings.php:382
+msgid ""
+"If you are happy with this plugin please show your love by liking us on "
+"Facebook"
+msgstr "Blij met deze plugin? Like ons op Facebook!"
+
+#: admin/wzn-settings.php:384
+msgid "Or"
+msgstr "of"
+
+#: admin/wzn-settings.php:386
+msgid "Rate the plugin 5&#9733; on WordPress.org"
+msgstr "Waardeer deze plugin met 5&#9733; op WordPress.org"
+
+#: admin/wzn-settings.php:387
+msgid "Blog about it & link to the plugin page"
+msgstr "Schrijf een blog en link naar de plugin pagina"
+
+#: inc/wzn-funct.php:34
+msgid ""
+"WooCommerce is not active. Please activate WooCommerce before using "
+"WooCommerce Zendesk Connect plugin."
+msgstr ""
+"WooCommerce is niet actief. Activeer a.u.b. eerst WooCommerce voordat je "
+"WooCommerce Zendesk Connect plugin kunt gebruiken."
+
+#: inc/wzn-funct.php:42
+msgid "Zendesk Connect"
+msgstr "Zendesk Connect"
+
+#: inc/wzn-funct.php:446
+msgid "Thank you for contacting us. Your message is successfully sent."
+msgstr "Bedankt voor je bericht. Je bericht is succesvol verzonden."
+
+#: inc/wzn-funct.php:450
+msgid "Something went wrong, please try again."
+msgstr "Er ging iets verkeerd. Probeer het a.u.b. opnieuw."
+
+#: inc/wzn-funct.php:462
+msgid "Succesfully sent"
+msgstr "Succesvol verzonden"
+
+#: inc/wzn-funct.php:474 inc/wzn-funct.php:477
+msgid "Name:"
+msgstr "Naam:"
+
+#: inc/wzn-funct.php:475 inc/wzn-funct.php:478
+msgid "Email:"
+msgstr "E-mail:"
+
+#: inc/wzn-funct.php:480
+msgid "Subject:"
+msgstr "Onderwerp:"
+
+#: inc/wzn-funct.php:481
+msgid "Message:"
+msgstr "Bericht:"
+
+#: inc/wzn-funct.php:482
+msgid "Send"
+msgstr "Verzenden"
+
+#~ msgid ""
+#~ "For only &euro; 25,00 you will get a lot of features and access to our "
+#~ "support section."
+#~ msgstr "Voor &euro; 29,00 "
+
+#~ msgid "Thank you for contacting us. Your message is succesfully send."
+#~ msgstr "Bedankt voor je bericht. Je bericht is succesvol verzonden."
+
+#~ msgid "Licence key"
+#~ msgstr "Licentie code"
+
+#~ msgid "User tag(s):"
+#~ msgstr "Gebruiker tag(s):"
+
+#~ msgid ""
+#~ "Comma seperated list of tags for Zendesk end users. Don't use spaces."
+#~ msgstr ""
+#~ "Komma gescheiden lijst van tags voor Zendesk eind-gebruikers. Gebruik "
+#~ "geen spaties."
+
+#~ msgid "Organization tag(s):"
+#~ msgstr "Organisatie tag(s):"
+
+#~ msgid ""
+#~ "Comma seperated list of tags for Zendesk organizations. Don't use spaces."
+#~ msgstr ""
+#~ "Komma gescheiden lijst van tags voor Zendesk organisaties. Gebruik geen "
+#~ "spaties."
+
+#~ msgid "Customer address:"
+#~ msgstr "Klant adres:"
+
+#~ msgid "As user details"
+#~ msgstr "Als gebruiker details"
+
+#~ msgid "As user notes"
+#~ msgstr "Als gebruiker notities"
+
+#~ msgid "As organization details"
+#~ msgstr "Als organisatie details"
+
+#~ msgid "As organization notes"
+#~ msgstr "Als organisatie notities"
+
+#~ msgid "Order number:"
+#~ msgstr "Bestel nummer:"
+
+#~ msgid ""
+#~ "Add order number to user details / notes or organization details / notes."
+#~ msgstr ""
+#~ "Voeg het bestelnummer toe aan gebruiker details / notitities of "
+#~ "organisatie details / notities"
+
+#~ msgid "Styling"
+#~ msgstr "Styling"
+
+#~ msgid "Enable WooCommerce Zendesk Connect CSS:"
+#~ msgstr "Activeer WooCommerce Zendesk Connect CSS:"
+
+#~ msgid ""
+#~ "We've made some default styling for the frontend. Do you want to use it?"
+#~ msgstr "We hebben een standaard styling gemaakt. Wil je deze gebruiken?"
+
+#~ msgid "Product detail tabs:"
+#~ msgstr "Product detail tabbladen:"
+
+#~ msgid "Don't add tab"
+#~ msgstr "Geen tab"
+
+#~ msgid "Enable new tab on product detail page with a Zendesk ticket form."
+#~ msgstr "Activeer een nieuwe product tab met een Zendesk ticket formulier."
+
+#~ msgid "Order detail page:"
+#~ msgstr "Order detail pagina:"
+
+#~ msgid "Let's get pro!"
+#~ msgstr "Let's get pro!"
+
+#~ msgid ""
+#~ "You can buy an licence key from our website. When using WooCOmmerce "
+#~ "Zendesk Connect Pro you are able to use more features. Check our website "
+#~ "for more information."
+#~ msgstr ""
+#~ "Koop een licentiecode vanaf onze website. Wanneer je WooCommerce Zendesk "
+#~ "Connect Pro gebruikt heb je veel meer functies. Kijk op onze website voor "
+#~ "meer informatie."
+
+#~ msgid "Licence Key"
+#~ msgstr "Licentie code"
+
+#~ msgid "Save licence Key"
+#~ msgstr "Bewaar licentie code"

@@ -2,7 +2,7 @@
 Contributors: bpluijms
 Tags: woocommerce, zendesk
 Requires at least: 3.5
-Tested up to: 4.0
+Tested up to: 4.2-alpha
 Stable tag: 0.0.9
 License: GPLv2
 
@@ -16,7 +16,7 @@ For more information and a complete list of features, check out [our website](ht
 
 This is just a first release and we've a lot of features we want to add in next releases.
 
-This plugin is compatible with Wordpress 4.0 and WooCommerce 2.2.0-bleeding.
+This plugin is compatible with Wordpress 4.2 and WooCommerce 2.3.x.
 
 **Features**
 

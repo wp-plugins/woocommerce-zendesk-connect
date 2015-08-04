@@ -1,15 +1,15 @@
 <?php
 /*
 Plugin Name: WooCommerce Zendesk Connect
-Plugin URI: http://wordpress.geev.nl/product/woocommerce-zendesk-connect/
+Plugin URI: https://wpfortune.com/shop/plugins/woocommerce-zendesk-connect/
 Description: This plugin connects WooCommerce with Zendesk. - Free version
-Version: 0.0.9
+Version: 1.0.0
 Requires at least: 3.5
-Author: Geev vormgeeving
-Author URI: http://wordpress.geev.nl/
+Author: WP Fortune
+Author URI: http://wpfortune.com
 License: GPL
 */
-/*  Copyright 2013  Geev  (email : wordpress@geev.nl)
+/*  Copyright 2013  WP Fortune  (email : info@wpfortune.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -65,8 +65,8 @@ if(get_option( 'woo_wzn_version' ) != "0.0.5")  {
 */
 function wzn_plugin_links($links) { 
   $settings_link = '<a href="admin.php?page=woocommerce_wzn" title="'.__('Settings','woo-wzn').'">'.__('Settings','woo-wzn').'</a>'; 
-  $premium_link = '<a href="http://wordpress.geev.nl/product/woocommerce-zendesk-connect/" title="Buy Pro" target=_blank>Buy Pro</a>'; 
-  array_unshift($links, $settings_link,$premium_link); 
+  $premium_link = '<a href="https://wpfortune.com/shop/plugins/woocommerce-zendesk-connect/" title="Buy Pro" target=_blank>Buy Pro</a>';
+  array_unshift($links, $settings_link,$premium_link);
   return $links; 
 }
 $plugin = plugin_basename(__FILE__); 

@@ -3,7 +3,7 @@
 * Title: WordPress settings page for WooCommerce Zendesk Connect
 * Description: Shows settings page for plugin
 * Copyright: Copyright (c) 2013
-* Company: Geev vormgeeving
+* Company: WP Fortune
 * @author Bart Pluijms
 */
 
@@ -369,23 +369,12 @@ function woocommerce_wzn_page() {
 					<div class="postbox">
 						<h3><?php _e( 'Buy Pro!', 'woo-wzn' ); ?></h3>
 						<div class="inside zendesk-preview">
-							<p><?php echo __( 'Check out our ', 'woo-wzn' ); ?> <a href="http://wordpress.geev.nl/product/woocommerce-zendesk-connect/">website</a> <?php _e('to find out more about WooCommerce Zendesk Connect Pro.', 'woo-wzn' );?></p>
-							<p><?php _e('For only &euro; 29,00 you will get a lot of features and access to our support section.', 'woo-wzn' );?></p>
-							<p><?php _e('A couple of features:', 'woo-wzn' );?>
-							<ul style="list-style:square;padding-left:20px;margin-top:-10px;"><li><?php _e('Add tags to users and organizations', 'woo-wzn' );?></li><li><?php _e('Add customer address to users or organizations', 'woo-wzn' );?></li><li><?php _e('Add ticket form to product detail page', 'woo-wzn' );?></li><li><?php _e('Add ticket form to order detail page', 'woo-wzn' );?></li></ul>
-						</div>
-					</div>
-					<div class="postbox">
-						<h3><?php _e( 'Show Your Love', 'woo-wzn' ); ?></h3>
-						<div class="inside zendesk-preview">
-							<p><?php echo sprintf(__( 'This plugin is developed by %s, a Dutch graphic design and webdevelopment company.', 'woo-wzn' ),'Geev vormgeeving'); ?></p>
-							<p><?php _e( 'If you are happy with this plugin please show your love by liking us on Facebook', 'woo-wzn' ); ?></p>
-							<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fgeevvormgeeving&amp;width=240&amp;height=62&amp;show_faces=false&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:62px;" allowTransparency="true"></iframe>
-							<p><?php _e( 'Or', 'woo-wzn' ); ?></p>
-							<ul style="list-style:square;padding-left:20px;margin-top:-10px;">
-								<li><a href="http://wordpress.org/extend/plugins/woocommerce-zendesk-connect/" target=_blank title="Woocommerce Zendesk Connect"><?php _e( 'Rate the plugin 5&#9733; on WordPress.org', 'woo-wzn' ); ?></a></li>
-								<li><a href="http://wordpress.geev.nl/product/woocommerce-zendesk-connect/" target=_blank title="Woocommerce Zendesk Connect"><?php _e( 'Blog about it & link to the plugin page', 'woo-wzn' ); ?></a></li>
-							</ul>
+
+                            <p><?php echo __( 'Check out our ', 'woo-wzn' ); ?> <a href="https://wpfortune.com/shop/plugins/woocommerce-zendesk-connect/">website</a> <?php _e('to find out more about WooCommerce Zendesk Connect.', 'woo-wzn' );?></p>
+							<p><?php _e('For only &euro; 35,00 you will get a lot of features and access to our support section.', 'woo-wzn' );?></p>
+							<p><?php _e('A couple of features:', 'woo-wzn' );?></p>
+                            	<ul style="list-style:square;padding-left:20px;margin-top:-10px;"><li><strong><?php _e('New', 'woo-wzn' );?></strong>: <?php _e('Add order information to a user in Zendesk', 'woo-wzn' );?></li><li><?php _e('Add tags to users and organizations', 'woo-wzn' );?></li><li><?php _e('Add customer address to users or organizations', 'woo-wzn' );?></li><li><?php _e('Add ticket form to product detail page', 'woo-wzn' );?></li><li><?php _e('Add ticket form to order detail page', 'woo-wzn' );?></li></ul>
+
 						</div>
 					</div>
 				</div>
